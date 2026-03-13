@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.input-add {
+    @apply border-2 border-red-600 outline-none
+}

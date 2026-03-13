@@ -1,11 +1,21 @@
 import { ChevronRightIcon, TrashIcon } from "lucide-react"
+import { useState } from "react"
 
-function Test({ test, changeTask, delet }) {
+function Test({ test, changeTask, delet, addTask }) {
     console.log(test)
+    const [name, setName] = useState("")    
+    const [idade, setIdade] = useState("")    
+    
+    
     // retorna uma lista baseada no array test
     // para cada indice desse array retorna um li com o nome do indice atual percorrido
-    return (
+    return (// sempre que quiser usar javaScript dentro do return usa chaves --> {}
         <div className="space-y-5">
+            <div className="flex flex-col gap-[10px_0px] w-50">
+                <input placeholder="digite um nome" className="input-add" value={name} onChange={(event) => setName(event.target.value)}></input>
+                <input placeholder="digite uma idade" className="input-add" value={idade} onChange={(infosDoEvento) => setIdade(infosDoEvento.target.value)}></input>
+                <button className="bg-yellow-500! text-white! font-medium uppercase">adicionar</button>
+            </div>
             {test.length > 0 
                 ? <h1>lista de nomes</h1> 
                 : null
