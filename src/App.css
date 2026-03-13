@@ -1,7 +1,1 @@
-.titulo {
-  color: purple;
-}
-
-.t2 {
-  color: red;  
-}
+@import "tailwindcss";
