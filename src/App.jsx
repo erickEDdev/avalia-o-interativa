@@ -1,36 +1,37 @@
 import { useState } from "react"
 import "./App.css"
 import Test from "./components/Test"
+import { v4 } from "uuid"
 
 function App () {// os hoolks são passados como parametros automaticamente para o componente!
   
   const [pass, setPass] = useState([
     {
-      id: 1,
+      id: v4(),
       name: "erick",
       idade: 17,
       concluida: false
     },
     {
-      id: 2,
+      id: v4(),
       name: "alexandre",
       idade: 300,
       concluida: false
     },
     {
-      id: 3,
+      id: v4(),
       name: "maximus",
       idade: 100,
       concluida: false
     },
     {
-      id: 4,
+      id: v4(),
       name: "leonidas",
       idade: 30,
       concluida: false
     },
     {
-      id: 5,
+      id: v4(),
       name: "ronald",
       idade: 18,
       concluida: false
@@ -69,6 +70,7 @@ function App () {// os hoolks são passados como parametros automaticamente para
     }
     setPass([...pass, newTask])// retorna tudo que estava na tarefa mais + uma tarefa
   }
+
 
   return (
     <div>
